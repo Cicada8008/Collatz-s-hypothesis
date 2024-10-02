@@ -1,0 +1,22 @@
+# Read the initial number from the user
+c0 = int(input("Enter a non-negative and non-zero integer: "))
+
+# Initialize a variable to count the number of steps
+steps = 0
+
+# Run the loop as long as c0 is not 1
+while c0 != 1:
+    print(c0)  # Print the current value of c0
+    
+    # Apply the Collatz rule
+    if c0 % 2 == 0:  # If c0 is even
+        c0 = c0 // 2
+    else:  # If c0 is odd
+        c0 = 3 * c0 + 1
+    
+    # Increment the step counter
+    steps += 1
+
+# Print the final value (1) and the number of steps
+print(c0)
+print("Number of calculations:", steps)
